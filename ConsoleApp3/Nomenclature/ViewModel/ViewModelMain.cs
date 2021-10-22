@@ -23,8 +23,10 @@ namespace ConsoleApp3
             var product2 = new DataModelPromoPackListProduct() { ID = 2, PromoPackListID = 2 };
 
             IVM<DataModelProduct> dsds = new ViewModelProduct<DataModelProduct>(product);
-            var t = selectedProduct.GetType().ToString();
-            var t2 = dsds.GetType().ToString();
+            var t = selectedProduct.GetType().ToString();//ConsoleApp3.ViewModelProduct`1[ConsoleApp3.DataModelProduct]
+            var t2 = dsds.GetType().ToString();          //ConsoleApp3.ViewModelProduct`1[ConsoleApp3.DataModelProduct]
+            //selectedProduct = dsds;//ошибка
+
         }
     }
 
