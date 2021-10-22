@@ -26,6 +26,7 @@ namespace ConsoleApp3
             var t = selectedProduct.GetType().ToString();//ConsoleApp3.ViewModelProduct`1[ConsoleApp3.DataModelProduct]
             var t2 = dsds.GetType().ToString();          //ConsoleApp3.ViewModelProduct`1[ConsoleApp3.DataModelProduct]
             //selectedProduct = dsds;//ошибка
+            selectedProduct = (TVMData)dsds;//решается ошибка путём явного приведения
 
         }
     }
