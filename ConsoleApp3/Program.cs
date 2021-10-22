@@ -2,7 +2,12 @@
 
 namespace ConsoleApp3
 {
-
+    // Этот класс является рооизводным от DataModelProduct
+    // и по сигнатуре класса ViewModelMain
+    // должен работать без ошибок.
+    // Поэтому компилятор никких предупреждения не показывает.
+    // Но в рунтайме они выкидывают исключения.
+    class DataModelProducts : DataModelProduct {}
     class Program
     {
         static void Main(string[] args)
@@ -13,11 +18,11 @@ namespace ConsoleApp3
             IVM<DataModelProduct> productVM = new ViewModelProduct<DataModelProduct>(product);
             // var promoPackListID = productVM.Data.PromoPackListID;//ошибка
 
-            IVM<DataModelPromoPackListProduct> productVM2 = new ViewModelPromoPackListProduct(product);
+            var productVM2 = new ViewModelPromoPackListProduct(product);
             var promoPackListID = productVM2.Data.PromoPackListID;
 
 
-            var viewModelMain = new ViewModelMain<ViewModelProduct<DataModelProduct>>();
+            var viewModelMain = new ViewModelMain<ViewModelProduct<DataModelProducts>>();
 
             IVM<DataModelProduct> SelectedProductProductVM = viewModelMain.SelectedProduct;
 
