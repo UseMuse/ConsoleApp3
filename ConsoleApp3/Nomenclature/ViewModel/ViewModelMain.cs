@@ -36,7 +36,7 @@ namespace ConsoleApp3
 
             selectedProduct = (TVMData)productVM1;//решается ошибка путём явного приведения
 
-           // products = (List<TVMData>)new List<IVM<DataModelProduct>>() { productVM1, productVM2 };
+            products = new List<TVMData>() { (TVMData)productVM1, (TVMData)productVM2 };
 
         }
     }
