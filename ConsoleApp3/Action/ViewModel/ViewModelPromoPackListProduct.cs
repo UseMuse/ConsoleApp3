@@ -7,6 +7,11 @@
         {
             var d = GetData;
         }
+
+        public ViewModelPromoPackListProduct()
+        {
+
+        }
     }
 
 }

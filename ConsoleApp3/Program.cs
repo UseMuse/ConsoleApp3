@@ -17,6 +17,8 @@ namespace ConsoleApp3
             var promoPackListID = productVM2.Data.PromoPackListID;
 
 
+            var dsds = new ViewModelMain<ViewModelProduct<DataModelProduct>>(productVM);
+            dsds.BuildProducts();
             Console.Read();
         }
     }

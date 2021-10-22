@@ -15,6 +15,10 @@
 
         public TData GetData => data;
 
+        public ViewModelProduct()
+        {
+
+        }
 
         public ViewModelProduct(TData data)
         {

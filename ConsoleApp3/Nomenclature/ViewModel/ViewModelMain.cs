@@ -12,7 +12,7 @@ namespace ConsoleApp3
         private IEnumerable<TVMData> products => new List<TVMData>();
         public IEnumerable<TVMData> Products => products;
 
-        public ViewModelMain()
+        public ViewModelMain(IVM<DataModelProduct> vM)
         {
 
         }
@@ -23,8 +23,8 @@ namespace ConsoleApp3
             var product2 = new DataModelPromoPackListProduct() { ID = 2, PromoPackListID = 2 };
 
             IVM<DataModelProduct> dsds = new ViewModelProduct<DataModelProduct>(product);
-            var t = selectedProduct.GetType();
-            var t2 = dsds.GetType();
+            var t = selectedProduct.GetType().ToString();
+            var t2 = dsds.GetType().ToString();
         }
     }
 
